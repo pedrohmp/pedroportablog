@@ -38,7 +38,7 @@ export default function Home() {
       <div className={styles.homeBg}>&nbsp;</div>
     </main>
 
-    <div>sfdfsfjid</div>
+    <div>sfdfsfjidsdsdsd</div>
     </>
   )
 }
