@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Dev Content Blog</title>
+      <title>Dev Content Blog.</title>
     </Head>
 
     <Header/>
