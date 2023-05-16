@@ -1,44 +1,39 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './home.module.scss';
-import Header from '../components/Header'
-import { AiOutlineMail,
-  AiOutlineInstagram,
-  AiFillGithub } from 'react-icons/ai';
+import * as React from 'react';
 
-export default function Home() {
+import { HeroSection } from '@/components/HeroSection';
+import Layout from '@/components/layout/Layout';
+import UnderlineLink from '@/components/links/UnderlineLink';
+import Seo from '@/components/Seo';
+
+/**
+ * SVGR Support
+ * Caveat: No React Props Type.
+ *
+ * You can override the next-env if the type is important to you
+ * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
+ */
+
+// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
+// Before you begin editing, follow all comments with `STARTERCONF`,
+// to customize the default configuration.
+
+export default function HomePage() {
   return (
-    <>
-    <Head>
-      <title>Dev Content Blog.</title>
-    </Head>
+    <Layout>
+      {/* <Seo templateTitle='Home' /> */}
+      <Seo />
 
-    <Header/>
-
-    <main className={styles.container}>
-      <div>
-        <section className={styles.content}>
-          <span>👏  Olá, seja bem-vindo!</span>
-          <h1>Um blog sobre novas <span>tecnologias</span> e programação.</h1>
-
-          <div className={styles.socialIcons}>
-            <AiFillGithub  size={20} />
-            <AiOutlineInstagram  size={20} />
-            <AiOutlineMail size={20} />
+      <main>
+        <section className='bg-white'>
+          <HeroSection />
+          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
+            <footer className='absolute bottom-2 text-gray-700'>
+              © {new Date().getFullYear()} By{' '}
+              <UnderlineLink href='/'>Pedro Porta</UnderlineLink>
+            </footer>
           </div>
-
-          <div className={styles.buttonContainer}>
-
-          <button>Acessar os conteúdos</button>
-          </div>
-        
         </section>
-      </div>
-
-      <div className={styles.homeBg}>&nbsp;</div>
-    </main>
-
-    <div>teste</div>
-    </>
-  )
+      </main>
+    </Layout>
+  );
 }
