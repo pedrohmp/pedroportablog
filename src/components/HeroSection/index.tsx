@@ -1,13 +1,17 @@
-import NextImage from '../NextImage';
+
+
+
+import NextImage from '@/components/NextImage';
+
 
 export const HeroSection = () => {
   return (
     <div
-      style={{ backgroundColor: '#020D1B' }}
-      className='flex items-center justify-between'
+      style={{ height: '40vh' }}
+      className='flex items-center justify-between bg-black gap-96'
     >
-      <div className='h-fit p-20'>
-        <h1 className='mb-10 text-4xl text-white'>
+      <div className='h-fit flex-auto pl-20'>
+        <h1 className='mb-10 text-4xl text-white w-10/12'>
           Blogging about code and life.
         </h1>
 
@@ -21,14 +25,10 @@ export const HeroSection = () => {
         <p className='mt-5 text-xs text-white'>Typescript - Next - Test E2E</p>
       </div>
 
-      <div className='flex-initial'>
-        <NextImage
-          useSkeleton
-          src='/images/giphy.gif'
-          width='450'
-          height='450'
-          alt='Icon'
-        />
+      <div className='flex-initial overflow-hidden' style={{ right: 0, height: '40vh', }}>
+
+        <NextImage width={700} height={1000} src="/images/giphy.gif" alt="Gif" />
+
       </div>
     </div>
   );
