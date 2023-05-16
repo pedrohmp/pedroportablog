@@ -28,7 +28,7 @@ export default function HomePage() {
           <HeroSection />
           <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
             <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
+              ©{new Date().getFullYear()} By{' '}
               <UnderlineLink href='/'>Pedro Porta</UnderlineLink>
             </footer>
           </div>
