@@ -3,6 +3,7 @@ import * as React from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import Layout from '@/components/layout/Layout';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import { PostList } from '@/components/PostList';
 import Seo from '@/components/Seo';
 
 /**
@@ -26,7 +27,8 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <HeroSection />
-          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
+          <PostList />
+          <div className='layout relative flex flex-col items-center justify-center py-12 text-center'>
             <footer className='absolute bottom-2 text-gray-700'>
               ©{new Date().getFullYear()} By{' '}
               <UnderlineLink href='/'>Pedro Porta</UnderlineLink>

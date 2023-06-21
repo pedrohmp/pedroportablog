@@ -29,7 +29,8 @@ export const HeroSection = () => {
 
       <div className='flex-initial overflow-hidden' style={{ right: 0, height: '40vh', }}>
 
-        <NextImage width={700} height={1000} src="/images/giphy.gif" alt="Gif" />
+        <NextImage useSkeleton loading='lazy' width={700} height={1000} src="/images/giphy.gif" alt="Gif" unoptimized={true}
+        />
 
       </div>
     </div>
